@@ -2,7 +2,7 @@ const http = require("http");
 const https = require("https");
 const server = http.createServer( (req, res) => {
     var data = "";
-  if (req.url == "/" && req.method == "GET") {
+  if (req.url == "/getTimeStories" && req.method == "GET") {
     https.get("https://time.com/", (response) => {
       response.on("data", (chunk) => {
         data += chunk;
